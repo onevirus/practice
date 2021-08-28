@@ -19,8 +19,6 @@ jobs:
     - name: Install pulumi
       run: |
         curl -fsSL https://get.pulumi.com | sh
-        echo "$HOME"
-        pulumi version
+    - run: |
         PATH="/home/runner/.pulumi/bin:$PATH"
         pulumi version
-    - run: pulumi version
