@@ -18,7 +18,7 @@ jobs:
         python-version: 3.8
     - uses: actions/setup-python@v2
       with:
-        python-version: 3.8
+        python-version: 3.9
     - name: Check version
       run: |
         python --version
