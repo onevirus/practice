@@ -1,0 +1,22 @@
+name: a
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  setup-build-deploy:
+    name: pulumi
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - uses: actions/setup-python@v2
+      with:
+        python-version: 3.9
+    - name: Install pulumi
+      run: |
+        curl -fsSL https://get.pulumi.com | sh
+        pulumi version
