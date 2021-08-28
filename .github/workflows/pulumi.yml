@@ -23,6 +23,6 @@ jobs:
         echo "---"
         ls .pulumi/bin
         pulumi version
-        PATH="$HOME/.pulumi/bin/$PATH"
+        PATH="/home/runner/.pulumi/bin:$PATH"
         pulumi version
     - run: pulumi version
