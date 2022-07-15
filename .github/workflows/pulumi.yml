@@ -14,7 +14,7 @@ jobs:
 
     steps:
       - name: print
-        run: echo ${{ github.base_ref }} <- ${{ github.head_ref }}
+        run: echo ${{ github.base_ref }}  ${{ github.head_ref }}
 
       - name: Checkout pull request
         uses: actions/checkout@v3
